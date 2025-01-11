@@ -34,18 +34,68 @@
 
         <!-- FORM -->
         <main class="container mt-3">
-            <p class="fs-3 fw-semibold mb-0">Richiesta Preventivo</p>
-            <p>Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+            <div class="row">
+                <div class="col-lg-8">
+                    
+                    <header>
+                        <p class="fs-3 fw-semibold mb-0">Richiesta Preventivo</p>
+                        <p class="mb-3">Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
+                    </header>
 
-            <form>
-                <div>
-                    <label for="inputName">Nome</label>
-                    <input type="text" name="name" id="inputName">
+                    <form>
+                        <div class="mb-2">
+                            <label for="inputName" class="form-label">Nome</label>
+                            <input type="text" class="form-control" name="name" id="inputName">
+                        </div>
+                        <div class="mb-2">
+                            <label for="inputSurname" class="form-label">Cognome</label>
+                            <input type="text" class="form-control" name="surname" id="inputSurname">
+                        </div>
+                        <div class="mb-2">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" name="email" id="inputEmail">
+                        </div>
+                        <div class="mb-2">
+                            <label for="selectTypeWork" class="form-label">Tipo di lavoro</label>
+                            <select name="typeWork" class="form-select" id="selectTypeWork">
+                                <option selected>Seleziona il tipo di lavoro</option>
+                                <option value="devBackend">Sviluppo Backend</option>
+                                <option value="devFrontend">Sviluppo Frontend</option>
+                                <option value="prjAnalysis">Analisi Progettuale</option>
+                            </select>
+                        </div>
+                        <div class="mb-2">
+                            <label for="inputMoreInfo" class="form-label">Textarea con Bootstrap 5</label>
+                            <textarea name="moreInfo" class="form-control" id="inputMoreInfo" rows="3"></textarea>
+                        </div>
+                        <div class="mb-2">
+                            <label for="inputPromoCode" class="form-label">Codice Promozionale (opzionale)</label>
+                            <input type="text" class="form-control" name="promoCode" id="inputPromoCode">
+                        </div>
+                        <div class="form-check mb-2 mb-lg-4">
+                            <input type="checkbox" class="form-check-input" value="" id="checkPrivacyPolicy">
+                            <label for="checkPrivacyPolicy" class="form-check-label">Accetto la Privacy Policy</label>
+                        </div>
+
+                        <!-- BOTTONE e VISUALIZZAZIONE PREZZO -->
+                        <div class="container mb-4">
+                            <div class="row">
+                                <div class="col-lg-6 mb-2 align-self-center text-center">
+                                    <button type="submit" class="btn btn-primary">Calcola preventivo</button>
+                                </div>
+                                <div class="col-lg-6 d-flex flex-column text-center">
+                                    <div class="fw-bold fs-5">Prezzo finale</div>
+                                    <div>
+                                        <span class="fw-bold fs-5">€ 200</span><span>,00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+            
+                <!-- Sezione card -->
                 </div>
-            </form>
-            
-        <!-- Sezione card -->
-            
+            </div>  
         </main>
 
         <!-- Sezione footer -->
