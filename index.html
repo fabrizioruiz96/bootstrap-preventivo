@@ -4,6 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/custom.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
         <title>Bool Factory - Preventivo</title>
     </head>
@@ -33,10 +34,10 @@
         </nav>
 
         <!-- FORM -->
-        <main class="container mt-3">
+        <main class="container mt-4">
             <div class="row">
+                
                 <div class="col-lg-8">
-                    
                     <header>
                         <p class="fs-3 fw-semibold mb-0">Richiesta Preventivo</p>
                         <p class="mb-3">Compila il form per richiedere un preventivo per i nostri servizi di sviluppo.</p>
@@ -72,13 +73,13 @@
                             <label for="inputPromoCode" class="form-label">Codice Promozionale (opzionale)</label>
                             <input type="text" class="form-control" name="promoCode" id="inputPromoCode">
                         </div>
-                        <div class="form-check mb-2 mb-lg-4">
+                        <div class="form-check mb-3 mb-lg-4">
                             <input type="checkbox" class="form-check-input" value="" id="checkPrivacyPolicy">
                             <label for="checkPrivacyPolicy" class="form-check-label">Accetto la Privacy Policy</label>
                         </div>
 
                         <!-- BOTTONE e VISUALIZZAZIONE PREZZO -->
-                        <div class="container mb-4">
+                        <div class="container mb-3">
                             <div class="row">
                                 <div class="col-lg-6 mb-2 align-self-center text-center">
                                     <button type="submit" class="btn btn-primary">Calcola preventivo</button>
@@ -92,13 +93,39 @@
                             </div>
                         </div>
                     </form>
+                </div>
             
                 <!-- Sezione card -->
+                <div class="col-lg-4 d-flex align-items-start justify-content-center mb-3">
+                    <div class="card" style="width: 300px;">
+                        <img src="./img/300x200.png" class="card-img-top" alt="">
+                        <div class="card-body">
+                            <h5 class="card-title">I nostri contatti</h5>
+                            <p class="card-text">Se hai bisogno di aiuto puoi contattarci:</p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">
+                                <a href="mailto:help@boolfactory.test" class="__linkInCard">help@boolfactory.test</a>
+                            </li>
+                            <li class="list-group-item">
+                                <a href="tel:+1122334455" class="__linkInCard">+1122334455</a>
+                            </li>
+                        </ul>
+                        <div class="card-body">
+                            <a href="#" class="card-link">Help desk</a>
+                        </div>
+                    </div>
                 </div>
+
             </div>  
         </main>
 
         <!-- Sezione footer -->
+         <footer class="bg-dark text-center py-3">
+            <div class="container">
+                <span class="text-white">&copy; 2024 - Tutti i diritti riservati</span>
+            </div>
+         </footer>
         
         <script src="./js/index.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
