@@ -9,7 +9,7 @@
         <title>Bool Factory - Preventivo</title>
     </head>
 
-    <body>
+    <body class="d-flex flex-column">    
         <!-- NAVBAR -->
         <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
             <div class="container">
@@ -34,7 +34,7 @@
         </nav>
 
         <!-- FORM -->
-        <main class="container mt-4">
+        <main class="container mt-4 flex-grow-1">
             <div class="row">
                 
                 <div class="col-lg-8">
@@ -46,20 +46,23 @@
                     <form>
                         <div class="mb-2">
                             <label for="inputName" class="form-label">Nome</label>
-                            <input type="text" class="form-control" name="name" id="inputName">
+                            <input type="text" class="form-control" name="name" id="inputName" required>
+                            <div class="invalid-feedback">Inserisci il tuo nome</div>
                         </div>
                         <div class="mb-2">
                             <label for="inputSurname" class="form-label">Cognome</label>
-                            <input type="text" class="form-control" name="surname" id="inputSurname">
+                            <input type="text" class="form-control" name="surname" id="inputSurname" required>
+                            <div class="invalid-feedback">Inserisci il tuo cognome</div>
                         </div>
                         <div class="mb-2">
                             <label for="inputEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" name="email" id="inputEmail">
+                            <input type="email" class="form-control" name="email" id="inputEmail" required>
+                            <div class="invalid-feedback">Inserisci una mail valida</div>
                         </div>
                         <div class="mb-2">
                             <label for="selectTypeWork" class="form-label">Tipo di lavoro</label>
-                            <select name="typeWork" class="form-select" id="selectTypeWork">
-                                <option selected>Seleziona il tipo di lavoro</option>
+                            <select name="typeWork" class="form-select" id="selectTypeWork" required>
+                                <option value="notAvailable" selected disabled>--Seleziona il tipo di lavoro--</option>
                                 <option value="devBackend">Sviluppo Backend</option>
                                 <option value="devFrontend">Sviluppo Frontend</option>
                                 <option value="prjAnalysis">Analisi Progettuale</option>
@@ -72,19 +75,22 @@
                         <div class="mb-2">
                             <label for="inputPromoCode" class="form-label">Codice Promozionale (opzionale)</label>
                             <input type="text" class="form-control" name="promoCode" id="inputPromoCode">
+                            <div class="valid-feedback">Codice promozionale accettato</div>
+                            <div class="invalid-feedback">Codice promozionale non accettato</div>
                         </div>
                         <div class="form-check mb-3 mb-lg-4">
-                            <input type="checkbox" class="form-check-input" value="" id="checkPrivacyPolicy">
+                            <input type="checkbox" class="form-check-input" value="" id="checkPrivacyPolicy" required>
                             <label for="checkPrivacyPolicy" class="form-check-label">Accetto la Privacy Policy</label>
+                            <div class="invalid-feedback">Devi accettate la Privacy Policy</div>
                         </div>
 
                         <!-- BOTTONE e VISUALIZZAZIONE PREZZO -->
                         <div class="container mb-3">
                             <div class="row">
                                 <div class="col-lg-6 mb-2 align-self-center text-center">
-                                    <button type="submit" class="btn btn-primary">Calcola preventivo</button>
+                                    <button type="submit" class="btn btn-primary" id="submitButton">Calcola preventivo</button>
                                 </div>
-                                <div class="col-lg-6 d-flex flex-column text-center">
+                                <div class="col-lg-6 d-flex flex-column text-center" id="finalPrice">
                                     <div class="fw-bold fs-5">Prezzo finale</div>
                                     <div>
                                         <span class="fw-bold fs-5">€ 200</span><span>,00</span>
@@ -121,12 +127,12 @@
         </main>
 
         <!-- Sezione footer -->
-         <footer class="bg-dark text-center py-3">
+        <footer class="bg-dark text-center py-3">
             <div class="container">
                 <span class="text-white">&copy; 2024 - Tutti i diritti riservati</span>
             </div>
-         </footer>
-        
+        </footer>
+
         <script src="./js/index.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     </body>
